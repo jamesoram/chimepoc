@@ -11,13 +11,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ChimePoc {
 
     public static void main(String[] args) {
-        String username = args[1];
-        String password = args[2];
-        String buzzword = args[3];
+        String username = args[0];
+        String password = args[1];
+        String buzzword = args[2];
 
         new ChimePoc().chime(username, password, buzzword);
     }
-    
+
     private void chime(String user, String password, String buzzword) {
         SearchResultsPage page = new LandingPage(getDriver()).enterEmail(user).enterPassword(password).search(buzzword);
         System.out.println("found " + page.getCandidateCount() + " leads");
