@@ -3,6 +3,7 @@ package io.tromba.chimepoc.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -18,6 +19,7 @@ public abstract class AbstractPage {
     public AbstractPage(WebDriver driver) {
         this.driver = driver;
         this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, 30);
     }
 
