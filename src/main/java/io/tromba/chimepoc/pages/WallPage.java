@@ -18,7 +18,8 @@ public class WallPage extends AbstractPage {
     }
 
     public SearchResultsPage search(String query) {
-        searchBox.sendKeys(query + Keys.ENTER);
+        searchBox.sendKeys(query);
+        searchBox.sendKeys(Keys.ENTER);
         return new SearchResultsPage(driver);
     }
 }

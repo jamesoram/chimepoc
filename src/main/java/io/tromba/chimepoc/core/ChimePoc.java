@@ -23,11 +23,13 @@ public class ChimePoc {
     }
 
     private void chime(String user, String password, String buzzword) {
-        SearchResultsPage page = new LandingPage(getDriver()).goToUrl()
+        WebDriver driver = getDriver();
+        SearchResultsPage page = new LandingPage(driver).goToUrl()
                 .enterEmail(user)
                 .enterPassword(password)
                 .search(buzzword);
         System.out.println("found " + page.getCandidateCount() + " leads");
+        driver.quit();
     }
 
     private WebDriver getDriver() {
