@@ -1,0 +1,38 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# eclipse files #
+######################
+.classpath
+.project
+
+# IDEA files #
+######################
+.idea
+atlassian-ide-plugin.xml
+**/*.iml
+
+# build files #
+######################
+build.properties
+build
+tmp
+target
+catalina.base_IS_UNDEFINED
+coverage-error.log
+overlays
+
+# P4 config #
+.p4config
+
+# Vagrant #
+.vagrant
+.settings/
