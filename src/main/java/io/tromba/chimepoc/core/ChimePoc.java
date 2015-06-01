@@ -27,6 +27,7 @@ public class ChimePoc {
         SearchResultsPage page = new LandingPage(driver).goToUrl()
                 .enterEmail(user)
                 .enterPassword(password)
+                .clickSignIn()
                 .search(buzzword);
         System.out.println("found " + page.getCandidateCount() + " leads");
         driver.quit();

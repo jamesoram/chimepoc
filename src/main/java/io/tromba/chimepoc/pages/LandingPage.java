@@ -1,6 +1,5 @@
 package io.tromba.chimepoc.pages;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +17,9 @@ public class LandingPage extends AbstractPage {
     @FindBy(id = "session_password-login")
     private WebElement passwordTextbox;
 
+    @FindBy(id = "signin")
+    private WebElement signInButton;
+
     public LandingPage(WebDriver driver) {
         super(driver);
     }
@@ -32,8 +34,13 @@ public class LandingPage extends AbstractPage {
         return this;
     }
 
-    public WallPage enterPassword(String password) {
-        passwordTextbox.sendKeys(password + Keys.ENTER);
+    public LandingPage enterPassword(String password) {
+        passwordTextbox.sendKeys(password);
+        return this;
+    }
+
+    public WallPage clickSignIn() {
+        signInButton.click();
         return new WallPage(driver);
     }
 }
