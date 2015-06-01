@@ -15,6 +15,7 @@ public class ChimePoc {
         String password = args[1];
         String buzzword = args[2];
 
+        System.out.println("Chiming with " + username + " for " + buzzword);
         new ChimePoc().chime(username, password, buzzword);
     }
 
