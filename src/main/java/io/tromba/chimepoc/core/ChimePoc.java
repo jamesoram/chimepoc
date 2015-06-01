@@ -11,6 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ChimePoc {
 
     public static void main(String[] args) {
+        if (args.length < 3) {
+            throw new RuntimeException("I need to know username, password and buzzword");
+        }
         String username = args[0];
         String password = args[1];
         String buzzword = args[2];
