@@ -36,4 +36,7 @@ overlays
 # Vagrant #
 .vagrant
 .settings/
+
+# Others
 dependency-reduced-pom.xml
+chime
