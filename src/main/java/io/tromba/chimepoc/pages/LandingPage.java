@@ -22,6 +22,11 @@ public class LandingPage extends AbstractPage {
         super(driver);
     }
 
+    public LandingPage goToUrl() {
+        driver.get(URL);
+        return this;
+    }
+
     public LandingPage enterEmail(String email) {
         emailTextbox.sendKeys(email);
         return this;
