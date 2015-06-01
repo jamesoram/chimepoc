@@ -8,5 +8,15 @@
     <artifactId>chimepoc</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <se.version>2.45.0</se.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${se.version}</version>
+        </dependency>
+    </dependencies>
 </project>
