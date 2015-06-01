@@ -10,8 +10,8 @@ import java.util.concurrent.TimeUnit;
  */
 public abstract class AbstractPage {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+    protected WebDriver driver;
+    protected WebDriverWait wait;
 
     public AbstractPage(WebDriver driver) {
         this.driver = driver;
