@@ -35,4 +35,4 @@ overlays
 
 # Vagrant #
 .vagrant
-.settings/
+.settings/dependency-reduced-pom.xml
